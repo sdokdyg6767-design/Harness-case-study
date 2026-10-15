@@ -195,5 +195,5 @@ aliases and can be invoked by name from any process. Deferred to report 05.
 
 ---
 
-*Next: [05 — Native Binaries & Trust Boundaries](./05-native-and-trust.md)*
+*Next: [05 — Update & Signing](./05-update-and-signing.md)*
 *Back: [01](./01-artifact-manifest.md) · [02](./02-ipc-surface.md) · [03](./03-sandbox-boundary.md)*

@@ -1,0 +1,26 @@
+# Normalize line endings so the repo does not churn.
+#
+# Without this, every text file is checked out with CRLF on Windows and stored
+# as LF. The local working copy and the remote then disagree on byte count even
+# when the content is identical -- 23 files in this repo differed by exactly
+# their CRLF count and nothing else.
+#
+# Verified: codex/evidence/voice-deep.txt was 31121 bytes locally with 165 CRLF;
+# 31121 - 165 = 30956, which is exactly the size in the remote tree.
+
+* text=auto eol=lf
+
+# Generated scan output is text, and should also normalize.
+*.txt  text eol=lf
+*.tsv  text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
+*.js   text eol=lf
+
+# Binary evidence artifacts -- never normalize these.
+*.exe binary
+*.dll binary
+*.vhdx binary
+*.png binary
+*.ico binary
+*.pdf binary
